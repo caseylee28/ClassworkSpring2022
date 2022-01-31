@@ -6,6 +6,8 @@ def interface():
     while keep_running:
         print("Options:")
         print("1-HDL")
+        print("2-LDL")
+        print("3-Total")        
         print("9-Quit")
         choice = input("Enter your choice: ")
         if choice == "9":
@@ -30,6 +32,27 @@ def check_HDL(HDL_value):
     else:
         answer = "Low"
     return answer
+    
+def check_LDL(LDL_value):
+    if LDL_value >= 190:
+        answer = "Very High"
+    elif 190> LDL_value >= 160:
+        answer = "High"
+    elif 160> LDL_value >= 130:
+        answer = "Borderline High"        
+    else:
+        answer = "Normal"
+    return answer  
+
+def total_cholesterol(HDL_value,LDL_value):
+    total_cholestrol_value = HDL_value+LDL_value
+    if total_cholestrol_value >= 240:
+        answer = "High"
+    elif 240> total_cholestrol_value >= 200:
+        answer = "Borderline High"
+    else:
+        answer = "Normal"
+    return answer    
 
 def HDL_drive():
     HDL_value = accept_input("HDL")
