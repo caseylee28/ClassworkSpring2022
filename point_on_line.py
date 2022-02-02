@@ -4,12 +4,12 @@ def input_point():
     return point_one, point_two
 
 
-#def connect_points(point1,point2):
-#    connect_2points = (eval(point1),eval(point2))
-#    return connect_2points
-    
-    
-def slope_2points(point1,point2):
+# def connect_points(point1,point2):
+#     connect_2points = (eval(point1),eval(point2))
+#     return connect_2points
+
+
+def slope_2points(point1, point2):
     point1_x = point1[0]
     point1_y = point1[1]
     point2_x = point2[0]
@@ -22,23 +22,23 @@ def slope_2points(point1,point2):
 #    print(slope)
     return slope
 
-    
+
 def new_x():
     new_x_value = int(input("Enter new x-value: "))
     return new_x_value
 
 
-def output_y(input_x,slope_of_line,point1):
+def output_y(input_x, slope_of_line, point1):
     y_value = slope_of_line * (input_x - point1[0]) + point1[1]
     print("The corresponding y-value is {}".format(y_value))
     return(y_value)
-    
+
 
 def main():
-    point1,point2 = input_point()
-    slope_of_line = slope_2points(point1,point2)
+    point1, point2 = input_point()
+    slope_of_line = slope_2points(point1, point2)
     third_x = new_x()
-    output_y(third_x,slope_of_line,point1)
+    output_y(third_x, slope_of_line, point1)
 #    print(point1)
 #    print(point2)
 #    two_points = connect_points(point1,point2)
